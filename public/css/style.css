@@ -1,0 +1,35 @@
+@import url("style-guide.css");
+/* Nav links hover effects */
+header ul li a {
+  transition: 0.3s ease-in;
+}
+header ul li a:hover {
+  transform: rotate(5deg);
+  color: var(--clr-primary);
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+/* footer links hover effects  */
+
+footer ul li a {
+  transition: 0.3s ease-in
+}
+footer ul li a:hover {
+  transform: rotate(5deg);
+  opacity: 80%;
+}
+.cards > * {
+  margin: var(--sp-150);
+}
+/* Footer P font size adjustment  */
+.info p {
+  font-size: 1rem;
+}
+/* Ajusting Line height on quote */
+.quote h1 {
+  line-height: 3.7rem;
+}
+/* Adjusting the width on the robbery text */
+.top-robbery-txt {
+    max-width: 950px;
+}

@@ -1,0 +1,41 @@
+@import url("style-guide.css");
+/* Button Styles */
+.btn-primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  opacity: 80%;
+}
+.btn-secondary {
+  background-color: var(--clr-secondary);
+  color: var(--clr-white);
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  opacity: 80%;
+}
+/* Card */
+.card {
+  padding: var(--sp-200) ;
+  background-color: var(--clr-tertiary);
+  border-radius: var(--sp-100);
+
+  h3 { 
+    font-size: var(--h6);
+    line-height: 4.5rem;
+ }_
+}

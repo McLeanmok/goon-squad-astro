@@ -1,0 +1,23 @@
+---
+// Metadata props
+type Props = {
+    title: string,
+    description?: string,
+}
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+		<meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/css/index.css">
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
