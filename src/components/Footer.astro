@@ -1,0 +1,71 @@
+---
+// asset imports 
+import { Image } from "astro:assets";
+import LightLogo from "../static/GS Logo - Light.svg";
+import facebook from "../static/icon-facebook - Light.svg";
+import twitter from "../static/icon-twitter - Light.svg";
+import instagram from "../static/icon-instagram - Light.svg";
+---
+<footer class="bg-primary p-section-sm clr-white">
+    <div class="container">
+      <div class="flex space-between">
+        <div class="site-info">
+          <a href="/" class="mb-150">
+            <Image
+              src={LightLogo}
+              alt="Goon Squad Logo"
+              title="Goon Squad Logo"
+          /></a>
+          <p>Copyright &copy; 2024 | all rights reserved to the Goon Squad</p>
+        </div>
+        <nav class="site-links">
+          <ul role="list" aria-label="Footer links">
+            <li class="mb-50">
+              <a class="clr-white" href="/index">Home</a>
+            </li>
+            <li class="mb-50">
+              <a class="clr-white" href="/found-objects">Found Objects</a>
+            </li>
+            <li class="mb-50">
+              <a class="clr-white" href="/gold-cure">Gold Cure</a>
+            </li>
+            <li class="mb-50">
+              <a class="clr-white" href="/music">Music</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contact">
+          <div class="info">
+            <p class="p mb-50" style="font-size: 1rem">Contact Us</p>
+            <p class="p mb-50" style="font-size: 1rem">info@goonsquad.com</p>
+            <p class="p mb-50" style="font-size: 1rem">
+              6 Birchard Ave. New York City
+            </p>
+            <p class="p mb-50" style="font-size: 1rem">(654)-376-8795</p>
+          </div>
+          <ul role="list" aria-label="Social Media Icons" class="flex">
+            <li aria-label="Facebook" class="p-100">
+              <Image src={facebook} alt="Facebook" />
+            </li>
+            <li aria-label="Twitter" class="p-100">
+              <Image src={twitter} alt="Twitter" />
+            </li>
+            <li class="p-100" aria-label="Instagram">
+              <Image src={instagram} alt="Instagram" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<style>
+    /* footer links hover effects  */
+
+        footer ul li a {
+        transition: 0.3s ease-in
+        }
+        footer ul li a:hover {
+        transform: rotate(3deg);
+        opacity: 80%;
+        }
+</style>

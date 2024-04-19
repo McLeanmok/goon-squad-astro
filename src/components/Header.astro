@@ -1,66 +1,25 @@
 ---
-import { __next_app__ } from "next/dist/build/templates/app-page";
 import logo from"../static/GS-Logo.svg";
 import { Image } from "astro:assets";
+import Nav from "./Nav.astro";
 const { isActive } = Astro.props;
 ---
 
-<header class="p-150">
+<header class="p-200">
     <div class="container">
       <div class="flex space-between content-center">
         <div class="logo">
-          <a href="index.html"
-            ><Image
+          <a href="index.html">
+            <Image
               src={logo}
               alt="Goon Squad Logo"
               title="Goon Squad logo"
           /></a>
         </div>
-        <nav>
-          <ul class="flex" id="nav" role="list" aria-label="Primary Navigation" >
-            <li class="p-100">
-              <a href="/">Home</a>
-            </li>
-            <li class="p-100">
-              <a href="/found-objects">Found Objects</a>
-            </li>
-            <li class="p-100">
-              <a href="/gold-cure">Gold Cure</a></li>
-            <li class="p-100">
-              <a href="/music">Music</a></li>
-          </ul>
-        </nav>
+        <Nav />
         <div class="cta">
           <a href="#" class="btn-primary">Join the Squad</a>
         </div>
       </div>
     </div>
   </header>
-  <!-- component styles -->
-  <style>
-    .active {
-      color: var(--clr-primary);
-    }
-    /* Nav links hover effects */
-    header ul li a {
-      transition: 0.3s ease-in;
-    }
-    header ul li a:hover {
-      transform: rotate(3deg);
-      color: var(--clr-primary);
-      border-bottom: 1px solid var(--clr-primary);
-    }
-
-  </style>
-
- <!--Set active class on nav when the page is active -->
-<script>
-  const links = document.querySelector('#nav');
-  const navLinks = links.querySelectorAll("a"); 
-  const currentURL = window.location.href;
-  navLinks.forEach((link) => {
-    if (link.href === currentURL) {
-      link.classList.add("active");
-    }
-  });
-</script>

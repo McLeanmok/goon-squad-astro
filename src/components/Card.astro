@@ -1,9 +1,24 @@
+---
+ interface Props {
+  title: string;
+  text: string;  
+}
+const {title, text} = Astro.props;
+---
 <div class="card">
-    <h3>Technology and Connectivity</h3>
-    <p>
-      Structurally, Egan’s novel is very much about how tightly
-      connected characters' lives are. In some of the chapters,
-      primary characters take the stage, and in others, they take a
-      backseat.
-    </p>
+    <h3>{title}</h3>
+    <p>{text}</p>
 </div>
+
+<style>
+  .card {
+  padding: var(--sp-200) ;
+  background-color: var(--clr-tertiary);
+  border-radius: var(--sp-100);
+
+  h3 { 
+    font-size: var(--h6);
+    line-height: 4.5rem;
+ }
+}
+</style>

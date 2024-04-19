@@ -1,11 +1,127 @@
 ---
-import Header from "../components/Header.astro";
+// component imports 
 import MainLayout from "../layouts/MainLayout.astro";
 
+// asset imports 
+import { Image } from "astro:assets";
+import web from "../static/index/web.jpg"
+import egan from "../static/index/egan.jpg";
+import bennie from "../static/index/bennie.jpg";
+import sasha from "../static/index/sasha.jpg";
+import Card from "../components/Card.astro";
 ---
 <MainLayout title="Home | Goon Squad">
     <main>
-        <Header isActive="true"/>
-        
-    </main>
+        <!-- Hero -->
+        <section class="p-section">
+          <div class="container">
+            <div class="heo-content grid">
+              <div class="hero-txt">
+                <h1 class="h1 mb-200">This is The Goon Squad</h1>
+                <p class="p">
+                  A Visit from the Goon Squad, which is authored by Jennifer Egan
+                  is a collection of stories that all deal with identity, time,
+                  and music. The chapters in this novel bounce around, and it’s
+                  weblike.
+                </p>
+              </div>
+              <div class="img">
+                <Image
+                  src={web}
+                  alt="A picture of a web"
+                  title="A Picture Of a Web (1)"
+                  width={1328}
+                  height={350}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Author  -->
+        <section class="bg-light-orange p-section txt-center content-center">
+          <div class="narrow-container m-auto">
+            <h2 class="h2 mb-200 clr-navy">Meet the Author</h2>
+            <p class="p mb-200 clr-navy">
+              Jennifer Egan is a well established American author. Numerous of her
+              books are winning all sorts of awards. A Visit From the Goon Squad,
+              for instance, won the 2011 Puiltzer prize. Fun fact: her recent
+              novel Candy House is a follow up to this novel.
+            </p>
+            <Image
+              class="m-auto"
+              src={egan}
+              alt="Jennifer Egan"
+              title="Jennifer Egan (2)"
+              height={1500}
+            />
+          </div>
+        </section>
+        <!-- Themes -->
+        <section class="p-section">
+          <div class="container">
+            <div class="top-txt narrow-container m-auto">
+              <h1 class="h1 mb-200 clr-navy txt-center">Themes</h1>
+              <p class="p clr-navy txt-center">
+                This novel have an abundance of themes, but here are the three
+                main ones
+              </p>
+            </div>
+            <div class="flex space-between mt-400 cards">
+                <Card title="Technology and Connectivity" text=" Structurally, Egan’s novel is very much about how tightly connected characters' lives are. In some of the chapters, primary characters take the stage, and in others, they take a backseat."/>
+                <Card title="Pop Culture" text="Throughout the book, Egan does a very deep critique of popular culture. Primarily, she focuses upon the music industry, but she ventures out into Journalism, Film, and photography." />
+              </div>
+            <div class="third-card mt-400">
+              <Card title="Identity" text=" Identity is arguably the most important theme in the book.Jennifer Egan dives deep, and explains that identity is inherent. Many of the characters struggle with finding their identity, and they are constantly exploring different avenues."/>
+            </div>
+          </div>
+        </section>
+        <!-- Characters  -->
+        <section class="p-section">
+          <div class="container">
+            <h2 class="h2 txt-center">Meet Your Characters</h2>
+            <div class="characters mt-400">
+              <div class="grid content-center">
+                <div class="left-txt content-center">
+                  <h3 class="h3 mb-200 clr-navy">Bennie Salazar</h3>
+                  <p class="p clr-navy">
+                    Bennie Salazar is a record producer for Sow's Ear Records.
+                    Arguably, he’s very successful, however, he distances himself
+                    from the people around him, and takes priority over his music.
+                    Bennie is a naturalist, and doesn’t believe in overproduction.
+                  </p>
+                </div>
+                <div class="img">
+                  <Image
+                    src={bennie}
+                    alt="Bennie Salazar"
+                    title="Bennie Salazar (3)"
+                    width={1328}
+                    height={550}
+                  />
+                </div>
+              </div>
+              <div class="grid content-center mt-400">
+                <div class="img">
+                  <Image
+                    src={sasha}
+                    alt="Sasha Blake"
+                    title="Sasha Blake (4)"
+                    width={1228}
+                    height={450}
+                  />
+                </div>
+                <div class="right-txt">
+                  <h3 class="h3 mb-200 clr-navy">Sasha Blake</h3>
+                  <p class="p clr-navy">
+                    Sasha Blake is both a major, and minor character in the novel.
+                    She likes a wild life as she’s trying to uncover her true
+                    identity. She is concerned about time moving forward, and
+                    ageing. She is troubled by addiction, and stealing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 </MainLayout>
