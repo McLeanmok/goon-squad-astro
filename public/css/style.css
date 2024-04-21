@@ -9,15 +9,7 @@ header ul li a:hover {
   border-bottom: 1px solid var(--clr-primary);
 }
 
-/* footer links hover effects  */
-
-footer ul li a {
-  transition: 0.3s ease-in
-}
-footer ul li a:hover {
-  transform: rotate(5deg);
-  opacity: 80%;
-}
+w
 .cards > * {
   margin: var(--sp-150);
 }

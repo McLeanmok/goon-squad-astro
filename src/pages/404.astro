@@ -1,0 +1,25 @@
+---
+import SeccondaryBtn from "../components/SeccondaryBtn.astro";
+import BlankLayout from "../layouts/BlankLayout.astro";
+---
+<BlankLayout title="Page Not Found">
+    <main class="bg-primary clr-white">
+        <section>
+            <div class="container">
+                <div class="flex justify-center txt-center flex-col">
+                    <h1 class="h1 mb-300">Oopsee Daisy!</h1>
+                    <p class="mb-300">The page which you tried to access doesn't exist! </p>
+                </div>
+                <div class="flex justify-center">
+                    <SeccondaryBtn text="Go Back Home" link="/" />
+            </div>
+            </div>
+        </section>
+    </main>
+</BlankLayout>
+
+<style>
+    main {
+        padding: 19vw;
+}
+</style>
