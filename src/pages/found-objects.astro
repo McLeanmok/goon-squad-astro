@@ -1,8 +1,66 @@
 ---
-import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+// asset imports 
+import { Image } from "astro:assets";
+import rob1 from "../static/found-objects/rob1.jpg";
+import knife from "../static/found-objects/knife.jpg";
+import keys from "../static/found-objects/keys.png";
+import scarfs from "../static/found-objects/scarfs.jpg";
+import soap from "../static/found-objects/soap.jpg";
+import sunglasses from "../static/found-objects/sunglasses.jpg";
+import binoculars from "../static/found-objects/binoculars.jpg";
+import allGood from "../static/found-objects/all-good.jpg";
 
-
+import pg1 from "../static/01.pdf";
 ---
 <MainLayout title="Gold Cure | Goon Squad" description="An overview of the Gold Cure Chapter">
+    <main>
+        <!-- Quote section  -->
+        <section class="p-section">
+            <div class="container">
+                <div class="grid content-center">
+                    <div class="quote">
+                        <h1 class="h3 mb-200 ">“We live in a city where people will <span class="clr-primary">steal</span> the hair off your head if you give them half a chance”</h1>
+                        <a href={pg1}><cite class="p">(Egan, 10)</cite></a>
+                    </div>
+                    <Image src={rob1} alt="A picture of a robber" title="A picture of a robber (1)" width={1330} height={350}>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section  (Come back and add JS) -->
+        <section class="p-section">
+            <div class="container">
+                <div class="top-text narrow-container m-auto txt-center">
+                    <h2 class="h2 clr-navy">Sasha’s found objects</h2>
+                    <p>These are some of the objects that Sasha stole. Take a look</p>
+                </div>
+                <div class="grid3 content-center mt-400" id="objects">
+                    <Image src={knife} alt="A Knife" title="A knife (2)" width={900} height={300}/>
+                    <Image src={keys} alt="A set of keys" title="Keys" width={900} height={300}/>
+                    <Image src={scarfs} alt="Some Scarfs" title="Scarfs" width={900} width={300} />
+                </div>
+
+                <div class="grid3 content-center mt-400">
+                    <Image src={binoculars} alt="A set of binoculars" title="Binoculars" height={300} width={300} />
+                    <Image src={sunglasses} alt="A Set of sunglasses" title="A set of sunglasses" width={300} height={600} />
+                    <Image src={soap} alt="A Bar of soap" title="A Bar of soap" height={300} width={300} />
+                </div>
+                <div class="narrow-container m-auto mt-400">
+                    <p class="clr-navy"><p class="p clr-navy txt-center">Sasha doesn’t touch the objects that she steals. She fears that if she uses the objects, she’ll feel guilty. When they’re untouched, Sasha feels like there might be a chance that they might still be returned one day. </p></p>
+                </div>
+            </div>
+        </section>
+        <!-- Robbery  -->
+        <section class="p-section" id="#rob">
+            <div class="container">
+                <div class="top-robbery-txt">
+                    <h2 class="h2 mb-200 clr-navy">The Robbery</h2>
+                    <p class="p clr-navy">Sasha steals a woman’s green purse while on her date. When the owner realises that it is missing, Sasha is scared. At last, she comes clean, and it’s all okay. 
+                    </p>                    
+                </div>
+                <Image class="mt-400" src={allGood} alt="Sasha and the woman making up" title="Sasha and the woman making up (8)">
+            </div>
+        </section>
+    </main>
+
 </MainLayout>
