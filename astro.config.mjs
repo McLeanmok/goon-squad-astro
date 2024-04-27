@@ -4,6 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://goon-squad.netlify.app",
+  site: "https://goon-squad-official.netlify.app/",
   integrations: [sitemap()]
 });
