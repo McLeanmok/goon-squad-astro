@@ -1,11 +1,16 @@
 ---
+// component imports 
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Seo from '../components/Seo.astro';
+// Metadata props
 type Props = {
     title?: string,
     description?: string,
+	image: string,
+	robots: string,
 }
-const { title, description } = Astro.props;
+const { title, description, image, robots } = Astro.props;
 ---
 
 
@@ -17,6 +22,13 @@ const { title, description } = Astro.props;
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="/css/index.css">
 	<meta name="generator" content={Astro.generator} />
+	<Seo 
+	{title}
+	{description}
+	url = Astro.url,
+	{image}
+	{robots}
+	/>
 	<meta name="description" content={description} />
 	<title>{title}</title>
 </head>
