@@ -2,8 +2,58 @@
 import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
-
+// asset imports
+import { Image } from "astro:assets";
+import stopGo from "../static/gold-cure/stop-go.png";
+import goldFlakes from "../static/gold-cure/gold-flakes.png";
+import driving from "../static/gold-cure/driving.jpg";
+import house from "../static/gold-cure/house.jpg";
+import SeccondaryBtn from "../components/SeccondaryBtn.astro";
 ---
-<MainLayout title="Found Objects | Goon Squad" description="An overview of the Found Objects Chapter">
-    <Header />
+<MainLayout title="Gold Cure | Goon Squad" description="An overview of the Found Objects Chapter">
+    <main>
+        <!-- Main consepts -->
+        <section class="p-section">
+            <div class="container">
+                <div class="grid">
+                    <div class="txt">
+                        <h2 class="h2 clr-navy mb-200">Introducing Stop/Go</h2>
+                        <p class="p clr-navy">Stop/Go is a sister band that Bennie Salazar has discovered. According to him, their music is fun and catchy. Stop/Go have sold many albums, and they are quite successful in the scene. Their sound is organic. Something that Bennie values very much.</p>
+                    </div>
+                    <Image src={stopGo} alt="A picture of Stop/Go" title="Picture of Stop/go (1)" width={1320} height={300}>
+                </div>
+        </section>
+        <section class="p-section">
+            <div class="container">
+                <div class="grid">
+                    <div class="txt">
+                        <h2 class="h2 clr-navy mb-200">Gold Flakes</h2>
+                        <p class="p clr-navy">In his coffee, Bennie sprinkles gold flakes. The reason why he does this is to boost his confidence. He read somewhere that these flakes help with sexual confidence.</p>
+                    </div>
+                    <Image src={goldFlakes} alt="Coffee With Gold flakes" title="Picture of coffee with gold flakes" width={1320} height={300}>
+                </div>
+        </section>
+        <!-- Natural Music -->
+        <section class="p-section bg-primary clr-white">
+            <div class="narrow-container m-auto">
+                <div class="top-text mb-400">
+                    <h2 class="h2 txt-center mb-200">“That’s Why Punk Died”</h2>
+                    <p class="p txt-center">On the way to pick up his son from school, Bennie is flicking through the radio, and reflecting that modern production is ruining music. There are very few songs that seem natural despite the production choices.</p>
+                </div>
+                <Image class="m-auto" src={driving} alt="Bennie Driving" title="Bennie Driving (3)">
+            </div>
+        </section>
+        <!-- Former house -->
+        <section class="p-section">
+            <div class="container">
+                <div class="grid">
+                    <div class="left-txt">
+                        <h2 class="h2 clr-navy mb-200">The Former House</h2>
+                        <p class="p clr-navy">When Bennie dropped his son, Chris, off, he dropped him off at his ex-wife’s house. Bennie prefers to call her house his “former House” to disassociate him with the house even though he still owns it.</p>
+                    </div>
+                    <Image src={house} alt="Bennie's former House" title="Bennie's former house (4)">
+                </div>
+            </div>
+        </section>
+    </main>
 </MainLayout>

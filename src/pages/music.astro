@@ -1,9 +1,59 @@
 ---
 import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-
-
+import iggy from "../static/music/Iggy Pop - The Passenger (Official Video).mp4";
+import blonde from "../static/music/Blondie - Heart Of Glass.mp4";
+import kennedys from"../static/music/Short Songs.mp4";
+import who from "../static/music/The Who - Who Are You (Promo Video).mp4";
+import beatles from "../static/music/The Beatles - Don't Let Me Down.mp4";
+import garbage from "../static/music/videoplayback.mp4";
+import jack from "../static/music/Banana Pancakes.mp4";
+import hey from "../static/music/The Lumineers - Ho Hey (Official Video).mp4";
+import colter from "../static/music/Colter Wall - Motorcycle (Audio).mp4";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 ---
 <MainLayout title="Music | Goon Squad" description="Music from the book">
-    <Header />
+    <main>
+        <!-- Title -->
+        <section class="p-section-sm txt-center">
+            <div class="container">
+                <h1 class="h1">Music From The Novel</h1>
+            </div>
+        </section>
+        <!-- Main Grid -->
+        <section class="p-section">
+            <div class="container">
+                <div class="flex">
+                    <video class="p-100" src={iggy} controls width="350px"></video>
+                    <video class="p-100" src={blonde} controls width="350px"></video>
+                    <video class="p-100" src={kennedys} controls width="350px"></video>
+                </div>
+                <div class="flex mt-400">
+                    <video src={who} controls width="350px" class="p-100"></video>
+                    <video src={beatles} controls width="350px" class="p-100"></video>
+                    <video src={garbage} controls width="350px" class="p-100"></video>
+                </div>
+            </div>
+        </section>
+        <!-- Natural music -->
+        <section class="p-section bg-primary" id="natural-music">
+            <div class="container">
+                <h2 class="h2 txt-center clr-white">Natural Music</h2>
+                <div class="flex">
+                    <video src={hey} controls width="350px" class="p-100"></video>
+                    <video src={colter} controls width="350" class="p-100"></video>
+                    <video src={jack} controls width="350px" class="p-1000"></video>
+                </div>
+            </div>
+        </section>
+        <!-- Playlist --> 
+        <section class="p-section">
+            <div class="container">
+                <h2 class="h2 txt-center mb-200">Take The Music Wherever You Go</h2>
+                <div class="playlist content-center">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1eTflVSYKWUX3EC9rHA4Pv?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
 </MainLayout>
